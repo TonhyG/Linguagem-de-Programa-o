@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Produtos</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 80px; /* Tamanho das imagens */
+            height: auto;
+        }
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid black;
+            display: inline-block;
+        }
+        .black-box {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            display: inline-block;
+        }
+        h3 {
+            color: red;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <h3>Tabela</h3>
+    
+    <table>
+        <tr>
+            <th>Foto</th>
+            <th>Código</th>
+            <th>Descrição</th>
+            <th>Qtde em estoque</th>
+            <th>Valor Unitário</th>
+        </tr>
+        <tr>
+            <td><span class="checkbox"></span> <img src="https://th.bing.com/th/id/OIP.0-KIptBohQtxzXbKAKqUFAHaFM?rs=1&pid=ImgDetMain" alt="Mouse com fio Dell"></td>
+            <td>1</td>
+            <td>Mouse Laser com fio Dell</td>
+            <td>5</td>
+            <td>R$ 179,00</td>
+        </tr>
+        <tr>
+            <td><span class="checkbox"></span> <img src="https://i5.walmartimages.com/asr/a130e889-917d-4445-88f9-a3d183c21fcd_1.5a7484ccbcc457ea8d86510229b7ce18.jpeg" alt="Mouse Bluetooth Dell"></td>
+            <td>2</td>
+            <td>Mouse Bluetooth Dell</td>
+            <td>6</td>
+            <td>R$ 338,00</td>
+        </tr>
+        <tr>
+            <td><span class="black-box"></span> <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6517/6517422_sd.jpg" alt="Mouse óptico USB preto"></td>
+            <td>3</td>
+            <td>Mouse óptico usb preto 100</td>
+            <td>3</td>
+            <td>R$ 48,30</td>
+        </tr>
+    </table>
+
+    <h2>Descrição</h2>
+    <br>
+    <h3>Caracteristicas do produto</h3>
+    <label for="mouse">Descrição do Mouse:</label>
+    <input type="text" id="mouse" name="mouse" placeholder="Digite a descrição do mouse">
+    <label for="mouse">O mouse é um dispositivo apontador usado para interagir com a interface gráfica de um computador, movendo o cursor na tela e executando ações como clicar, arrastar e rolar.</label>
+    <ul>
+        <li>
+            Sensor óptico preciso com 1.600 DPI permite que você trabalhe na maioria das superfícies
+        </li>
+        <li>
+            Configuração USB rápida e fácil com cabo de 1,5m
+        </li>
+        <li>
+            Design ambidestro, produzido para caber de forma natural e perfeita na palma da sua mão
+        </li>
+        <li>
+            Três botões integrados
+        </li>
+        <li>
+            Ampla compatibilidade: Windows e Mac
+        </li>
+    </ul>
+    <h3>Avaliação do produto</h3>
+    <dl>
+        <dt>José Aparecido</dt>
+        <dd>Muito bom</dd>
+        <dt>Joaquim Jorge</dt>
+        <dd>Bom</dd>
+    </dl>
+
+
+
+
+</body>
+</html>
