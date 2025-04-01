@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout com Menu Lateral</title>
+  <style>
+    /* Reset de margens e padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilo do menu superior fixo */
+    .menu-superior {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    /* Estilo da barra lateral fixa */
+    .barra-lateral {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20%;
+      height: 100%;
+      background-color: #444;
+      color: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    .barra-lateral a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      margin: 10px 0;
+    }
+
+    .barra-lateral a:hover {
+      background-color: #666;
+      padding: 5px;
+    }
+
+    /* Estilo da área de conteúdo */
+    .conteudo-principal {
+      margin-left: 20%; /* Deixa espaço para a barra lateral */
+      padding: 20px;
+      background-color: #f4f4f4;
+      height: 100vh;
+      overflow-y: auto;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    /* Estilo do rodapé fixo */
+    .rodape {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .barra-lateral {
+        width: 50%;
+      }
+
+      .conteudo-principal {
+        margin-left: 50%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .barra-lateral {
+        width: 100%;
+        height: auto;
+      }
+
+      .conteudo-principal {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu superior -->
+  <div class="menu-superior">
+    Menu Superior
+  </div>
+
+  <!-- Barra lateral -->
+  <div class="barra-lateral">
+    <a href="#">Home</a>
+    <a href="#">Sobre</a>
+    <a href="#">Serviços</a>
+    <a href="#">Contato</a>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="conteudo-principal">
+    <p>Conteúdo principal da página.</p>
+  </div>
+
+  <!-- Rodapé -->
+  <div class="rodape">
+    Rodapé Fixo
+  </div>
+
+</body>
+</html>
