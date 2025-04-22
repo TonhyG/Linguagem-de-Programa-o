@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu de Atividades</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+
+    /* Menu lateral */
+    .sidebar {
+      width: 200px;
+      background-color: #2c3e50;
+      color: white;
+      height: 100vh;
+      padding-top: 20px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover {
+      background-color: #34495e;
+    }
+
+    /* Área de conteúdo */
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <a onclick="carregarAtividade('tags')">Tags HTML</a>
+    <a onclick="carregarAtividade('css')">CSS Fundamentos</a>
+    <a onclick="carregarAtividade('flexbox')">Flexbox</a>
+    <a onclick="carregarAtividade('dom')">DOM</a>
+  </div>
+
+  <div class="content" id="conteudo">
+    <h2>Bem-vindo!</h2>
+    <p>Selecione uma atividade no menu ao lado para começar.</p>
+  </div>
+
+  <script>
+    function carregarAtividade(atividade) {
+      const conteudo = document.getElementById('conteudo');
+
+      switch (atividade) {
+        case 'tags':
+          conteudo.innerHTML = `
+            <h2>Tags HTML</h2>
+            <p>Exemplo de algumas tags básicas:</p>
+            <ul>
+              <li><code>&lt;h1&gt;</code> até <code>&lt;h6&gt;</code> — Títulos</li>
+              <li><code>&lt;p&gt;</code> — Parágrafo</li>
+              <li><code>&lt;a&gt;</code> — Link</li>
+              <li><code>&lt;img&gt;</code> — Imagem</li>
+            </ul>
+          `;
+          break;
+
+        case 'css':
+          conteudo.innerHTML = `
+            <h2>CSS Fundamentos</h2>
+            <p>CSS é usado para estilizar elementos HTML. Exemplo:</p>
+            <pre><code>p {
+  color: blue;
+  font-size: 16px;
+}</code></pre>
+          `;
+          break;
+
+        case 'flexbox':
+          conteudo.innerHTML = `
+            <h2>Flexbox</h2>
+            <p>Flexbox é um modelo de layout. Exemplo:</p>
+            <pre><code>display: flex;
+justify-content: center;
+align-items: center;</code></pre>
+          `;
+          break;
+
+        case 'dom':
+          conteudo.innerHTML = `
+            <h2>DOM</h2>
+            <p>O DOM permite manipular elementos da página com JavaScript. Exemplo:</p>
+            <pre><code>document.getElementById("meuElemento").innerText = "Olá";</code></pre>
+          `;
+          break;
+
+        default:
+          conteudo.innerHTML = "<p>Atividade não encontrada.</p>";
+      }
+    }
+  </script>
+
+</body>
+</html>
